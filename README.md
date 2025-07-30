@@ -127,6 +127,23 @@ If you want to use your own video, you must first find the correct perspective t
     python calibrate_perspective.py
     ```
 3.  A window will appear with the first frame of your video. Click on the four corners of the lane in front of the car in the following order: **Top-Left, Top-Right, Bottom-Right, Bottom-Left**.
+
+```bash
+          |                   |
+          |    (Horizon)      |
+          |                   |
+          '  1-------2  '      <-- The top edge of your rectangle on the road
+         /    (Top-L) (Top-R)   \
+        /                       \
+       /                         \
+      /                           \
+     /                             \
+    '4---------------------------3'  <-- The bottom edge of your rectangle
+   (Bot-L)                     (Bot-R)
+
+[ Your Car's Position is Here at the Bottom ]
+```
+
 4.  The script will print a `SRC_POINTS` array to the console.
 5.  Copy this array and paste it into `config.py`, replacing the existing `SRC_POINTS` value.
 
